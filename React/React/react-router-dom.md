@@ -6,3 +6,10 @@
 
 - react-router-domで、真っ白な画面が最初に出てきてると、同じ画面を無限に読み込んでるエラーかも？
   - Error: Can't resolve 'react'
+
+- Cannot GET/xxx と出でくる場合は、`historyApiFallback`を設定する
+  ```
+  devServer {
+      historyApiFallback: true
+  }
+  ```
