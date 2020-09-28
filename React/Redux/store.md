@@ -7,3 +7,7 @@
   const sotre = createStore(reducers);
   ```
   - 4. storeを外部から呼び出せるようにする(exportする)
+
+- Reactからstoreに変化を加えられるようにするために
+  - 1. Actionを入れた関数を呼び出せるようにする
+  - 2. `this.props.dispatch`を使ってactionをディスパッチする

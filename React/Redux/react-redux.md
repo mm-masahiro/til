@@ -10,3 +10,11 @@
 - 2. connectを使用してコンポーネントからStoreにアクセスできるようにする
   - `connect`
     - 個別のコンポーネントからStoreの情報にアクセスできるようにする
+
+- 3. `mapStateToProps`を追加してStoreの情報をpropsに反映させる
+  - `mapStateToProps`
+    - storeの情報をpropsに反映させることができる
+    - 引数には自動的にstoreの中身が与えられ、その中身をどんな名前で個別のコンポーネントのpropsに渡すかを宣言する
+      - 引数としてstateが与えられる
+        - `state.xxx`としてreducerで宣言されたものが格納される
+
