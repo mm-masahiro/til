@@ -11,3 +11,4 @@
 - Reactからstoreに変化を加えられるようにするために
   - 1. Actionを入れた関数を呼び出せるようにする
   - 2. `this.props.dispatch`を使ってactionをディスパッチする
+    - `connnect()`を使用したコンポーネントからは`this.props.dispatch`を使ってディスパッチできる
