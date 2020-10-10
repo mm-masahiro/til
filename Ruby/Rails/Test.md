@@ -47,3 +47,11 @@ rails g model xxx  column1:type column2:type ...
 ## Guard
 - Guardを使うことでテストを自動的に実行できる
 - Guardはファイルシステムの変更を監視し、ファイルなどを変更すると自動的にテストを実行してくれるツール
+
+## assert_select
+- 特定のリンクが存在するかどうかをチェックできる
+
+```
+<!-- "?"をabout_pathに置換している -->
+assere_select "a[href=?]", help_path
+```
