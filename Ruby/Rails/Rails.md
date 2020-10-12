@@ -66,3 +66,15 @@
 ## パーシャル
 - `_xxxx.html.erb` ←命名規則
 - Reactとかでいうコンポーネントのイメージ？
+
+## Active Record
+- データを永続化するためにRailsではDBを使う
+- DBとやり取りするデフォルトのRailsライブラリがActive Record
+- Active RecordはORマッパー
+
+## パスワードのハッシュ化
+- `has_secure_password`で簡単にできる
+  - DB内の`password_digest`という属性に保存できる
+  - `password`と`password_confirm`という2つの仮想的な属性のペアが使えるようになる
+  - `authenticate`メソッドが使えるようになる
+- パスワードをハッシュ化するために、ハッシュ関数であるd`bcrypt`をGemFileに追加する

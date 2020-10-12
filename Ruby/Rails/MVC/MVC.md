@@ -4,6 +4,17 @@
 ## Model
 - DB関連の処理を担当
 - DBに対して様々な問い合わせを行う
+- データモデルとして扱うデフォルトのデータ構造
+- Railsはデータを保存する際にデフォルトでRDBが使われる
+
+```
+rails g model TableName column1:type column2:type ....
+```
+
+### RDB
+- RDBはデータ行で構成されるテーブルからなり、各行はデータ属性のカラムを持つ
+  - ex.
+  - nameとemailを持つユーザーを保存するのであれば、nameとemailのカラムを持つusersテーブルを作成する
 
 ## View
 - 画面表示（HTML）を担当
