@@ -1,0 +1,3 @@
+# ActiveRecord
+- データベースとの接続から値の取得をしてくれるORマッパー
+- ActiveRecordを使うことで簡単にDBとRubyの連携ができる
