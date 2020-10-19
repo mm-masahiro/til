@@ -48,3 +48,12 @@
     - format (フォーマット)
     - uniqueness (一意性)
     - confirmation (確認)
+
+## .create
+- モデルの生成から保存をひとまとめに実行するメソッド
+- 保存したいカラムを引数として渡す
+- ex
+```
+user.create(name: "Taro")
+user.create(name: name)
+```

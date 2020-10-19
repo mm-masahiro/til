@@ -20,6 +20,26 @@ spec/
 bundle exec rspec
 ```
 
+## Rspecのキーワード
+- describe
+  - テストの対象になるものを書く（見出し的な）
+
+- context
+  - 「xxxの場合」というように前提条件を書く
+
+- before
+  - テスト全体のデータを投入する
+
+- let
+   - 変数のようなもの
+   - itの中でデータを書き換えたりする
+
+- subject
+  - オブジェクト。itの中で対象となるテストデータを定義
+
+- it
+  - 「xxxとなること」みたいなテストの内容を書く
+
 ### itメソッド
 - テスト対象のメソッドがどのような振る舞いをするかを文章で書く
 
@@ -55,3 +75,34 @@ rails g model xxx  column1:type column2:type ...
 <!-- "?"をabout_pathに置換している -->
 assere_select "a[href=?]", help_path
 ```
+
+## factory
+### データを作成する
+- `factory()`でファクトリ（テストデータの型）を定義する
+```
+`test/factories/users.rb`
+
+factory :alice, class: User do
+    name 'Alice'
+    admin true
+  end
+
+  factory :bob, class: User do
+    name 'Bob'
+    admin false
+  end
+
+  # ...
+
+end
+```
+### データを生成する
+- ファクトリとして定義したデータはインスタンス化（生成）することでテストデータとして利用できる
+```
+alice = build(:alice)
+
+Taroという属性値をファクトリの生成時に決定できる
+alice = build(:alice, name:'Taro')
+```
+
+モデルのテストはDBとの連携がうまくいってるか、テーブルの制約がちゃんとかかってるかのチェック
